@@ -256,7 +256,12 @@ document.addEventListener('keydown', function (event) {
     };
 
     function eventKey() {
+       
         switch (event.code) {
+            case 'AltRight':
+                break;
+            case 'AltRight':
+               break;
             case 'Enter':
                 textValue.value += '\n';
                 break;
@@ -318,6 +323,11 @@ keyboard.addEventListener('mousedown', function (event) {
     event.stopPropagation();
 
     switch (event.target.innerText) {
+
+        case 'alt':
+                break;
+        case 'ctrl':
+           break;
         case 'enter':
             textValue.value += '\n';
             break;

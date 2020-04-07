@@ -53,10 +53,10 @@ const keyboardObject = {
             ['l', 'L'],
             [';', ':'],
             ['\'', '"'],
-            ['enter ↵', 'enter ↵']
+            ['enter', 'enter']
         ],
         [
-            ['shift   ⇧', 'shift   ⇧'],
+            ['shift', 'shift'],
             ['z', 'Z'],
             ['x', 'X'],
             ['c', 'C'],
@@ -67,7 +67,7 @@ const keyboardObject = {
             [',', '<'],
             ['.', '>'],
             ['/', '?'],
-            ['shift   ⇧', 'shift   ⇧'],
+            ['shift', 'shift'],
             ['▲', '▲']
         ],
         [
@@ -128,10 +128,10 @@ const keyboardObject = {
             ['д', 'Д'],
             ['ж', 'Ж'],
             ['э', 'Э'],
-            ['enter ↵', 'enter ↵']
+            ['enter', 'enter']
         ],
         [
-            ['shift   ⇧', 'shift   ⇧'],
+            ['shift', 'shift'],
             ['я', 'Я'],
             ['ч', 'Ч'],
             ['с', 'С'],
@@ -142,7 +142,7 @@ const keyboardObject = {
             ['б', 'Б'],
             ['ю', 'Ю'],
             ['.', ','],
-            ['shift   ⇧', 'shift   ⇧'],
+            ['shift', 'shift'],
             ['▲', '▲']
         ],
         [

@@ -90,6 +90,11 @@
     }
   }
 
+  .commandKeys{
+      font-family: Arial,sans-serif;
+  font-size: 24px;}
+
+
 .CapsLock {
     width: 85px;
 }

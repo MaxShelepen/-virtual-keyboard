@@ -71,12 +71,14 @@
 .active {
     color: white;
     background: #ba4d47;
-  
+    border-radius: 20px;
+    transition: 0.2s;
 }
 .key:active {
     color: white;
     background: #ba4d47;
-    
+    border-radius: 20px;
+    transition: 0.2s;
   }
   @keyframes active {
     from {

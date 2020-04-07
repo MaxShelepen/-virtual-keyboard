@@ -181,3 +181,14 @@ const keyboardTemplate = `<textarea class="textarea" id="textarea" rows="5" cols
 <div class="keyboard" id = "keyboard">${getkeyboardRow(keyboardObject.keysName)}</div>`;
 
 keyboradContainer.innerHTML = keyboardTemplate;
+
+
+const textValue = document.getElementById('textarea');
+const keyboard = document.querySelector('#keyboard');
+const englishLangauge = document.querySelectorAll('.eng > span');
+const rusLangauge = document.querySelectorAll('.rus > span');
+const language = document.querySelectorAll('.key > span');
+const shift = document.querySelector('.ShiftLeft')
+const capslock = document.querySelector('.CapsLock');
+const arrayKey = ['Backspace', 'Tab', 'CapsLock', 'ShiftLeft', 'ControlLeft', 'Delete', 'Enter', 'ShiftRight', 'ArrowUp', 'AltRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight'];
+

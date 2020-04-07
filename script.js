@@ -1,6 +1,7 @@
 const keyboradContainer = document.createElement('div');
 keyboradContainer.classList = 'keyboard__container';
 
+
 document.body.insertAdjacentElement('afterbegin', keyboradContainer);
 let lang = localStorage.getItem('lang');
 
@@ -181,7 +182,10 @@ const keyboardTemplate = `<textarea class="textarea" id="textarea" rows="5" cols
 <div class="keyboard" id = "keyboard">${getkeyboardRow(keyboardObject.keysName)}</div>`;
 
 keyboradContainer.innerHTML = keyboardTemplate;
-
+const commandKeys = document.createElement('span');
+commandKeys.classList.add('commandKeys');
+commandKeys.innerHTML = 'Переключение языка ShfitLeft CtrlLeft .Выполнено на Windows'
+keyboradContainer.append(commandKeys);
 
 const textValue = document.getElementById('textarea');
 const keyboard = document.querySelector('#keyboard');

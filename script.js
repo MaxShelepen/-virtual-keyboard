@@ -223,11 +223,11 @@ function shiftEventOff(event) {
 
 function switchLanguage(event) {
     language.forEach((el) => {
-        if(el.className.includes('hidden')) {
+        if (el.className.includes('hidden')) {
             el.classList.remove('hidden');
             localStorage.setItem('lang', el.className);
-           } else {
-                el.classList.add('hidden');
+        } else {
+            el.classList.add('hidden');
         };
     });
 };
@@ -297,8 +297,6 @@ document.addEventListener('keydown', function (event) {
     eventKey();
 
 });
-
-
 document.addEventListener('keyup', function (event) {
     keyboard.querySelectorAll('.row > .key').forEach((el) => {
         if (el.className.includes(event.code) && event.code !== 'CapsLock') {
@@ -314,7 +312,7 @@ document.addEventListener('keyup', function (event) {
 
 keyboard.addEventListener('mousedown', function (event) {
     event.stopPropagation();
-   
+
     switch (event.target.innerText) {
         case 'enter':
             textValue.value += '\n';

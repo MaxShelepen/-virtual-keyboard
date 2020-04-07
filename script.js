@@ -314,7 +314,7 @@ document.addEventListener('keyup', function (event) {
 
 keyboard.addEventListener('mousedown', function (event) {
     event.stopPropagation();
-    console.log(event.target.innerText)
+   
     switch (event.target.innerText) {
         case 'enter':
             textValue.value += '\n';

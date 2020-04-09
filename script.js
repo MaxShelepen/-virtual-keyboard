@@ -1,6 +1,7 @@
 const keyboradContainer = document.createElement('div');
 keyboradContainer.classList = 'keyboard__container';
 
+
 document.body.insertAdjacentElement('afterbegin', keyboradContainer);
 let lang = localStorage.getItem('lang');
 
@@ -52,10 +53,10 @@ const keyboardObject = {
             ['l', 'L'],
             [';', ':'],
             ['\'', '"'],
-            ['enter ↵', 'enter ↵']
+            ['enter', 'enter']
         ],
         [
-            ['shift   ⇧', 'shift   ⇧'],
+            ['shift', 'shift'],
             ['z', 'Z'],
             ['x', 'X'],
             ['c', 'C'],
@@ -66,7 +67,7 @@ const keyboardObject = {
             [',', '<'],
             ['.', '>'],
             ['/', '?'],
-            ['shift   ⇧', 'shift   ⇧'],
+            ['shift', 'shift'],
             ['▲', '▲']
         ],
         [
@@ -127,10 +128,10 @@ const keyboardObject = {
             ['д', 'Д'],
             ['ж', 'Ж'],
             ['э', 'Э'],
-            ['enter ↵', 'enter ↵']
+            ['enter', 'enter']
         ],
         [
-            ['shift   ⇧', 'shift   ⇧'],
+            ['shift', 'shift'],
             ['я', 'Я'],
             ['ч', 'Ч'],
             ['с', 'С'],
@@ -141,7 +142,7 @@ const keyboardObject = {
             ['б', 'Б'],
             ['ю', 'Ю'],
             ['.', ','],
-            ['shift   ⇧', 'shift   ⇧'],
+            ['shift', 'shift'],
             ['▲', '▲']
         ],
         [
@@ -181,7 +182,10 @@ const keyboardTemplate = `<textarea class="textarea" id="textarea" rows="5" cols
 <div class="keyboard" id = "keyboard">${getkeyboardRow(keyboardObject.keysName)}</div>`;
 
 keyboradContainer.innerHTML = keyboardTemplate;
-
+const commandKeys = document.createElement('span');
+commandKeys.classList.add('commandKeys');
+commandKeys.innerHTML = 'Переключение языка ShfitLeft CtrlLeft .Выполнено на Windows'
+keyboradContainer.append(commandKeys);
 
 const textValue = document.getElementById('textarea');
 const keyboard = document.querySelector('#keyboard');
@@ -223,11 +227,11 @@ function shiftEventOff(event) {
 
 function switchLanguage(event) {
     language.forEach((el) => {
-        if(el.className.includes('hidden')) {
+        if (el.className.includes('hidden')) {
             el.classList.remove('hidden');
             localStorage.setItem('lang', el.className);
-           } else {
-                el.classList.add('hidden');
+        } else {
+            el.classList.add('hidden');
         };
     });
 };
@@ -252,7 +256,12 @@ document.addEventListener('keydown', function (event) {
     };
 
     function eventKey() {
+       
         switch (event.code) {
+            case 'AltRight':
+                break;
+            case 'AltRight':
+               break;
             case 'Enter':
                 textValue.value += '\n';
                 break;
@@ -297,8 +306,6 @@ document.addEventListener('keydown', function (event) {
     eventKey();
 
 });
-
-
 document.addEventListener('keyup', function (event) {
     keyboard.querySelectorAll('.row > .key').forEach((el) => {
         if (el.className.includes(event.code) && event.code !== 'CapsLock') {
@@ -314,8 +321,13 @@ document.addEventListener('keyup', function (event) {
 
 keyboard.addEventListener('mousedown', function (event) {
     event.stopPropagation();
-   
+
     switch (event.target.innerText) {
+
+        case 'alt':
+                break;
+        case 'ctrl':
+           break;
         case 'enter':
             textValue.value += '\n';
             break;
